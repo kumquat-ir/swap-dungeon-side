@@ -1,3 +1,5 @@
 A fun mod that changes the side of the world that the dungeon generates on.
 This will not change anything except the dungeon, leading to the dungeon and jungle being on the opposite side of the world as the snow.
 Make worldgen a bit more interesting!
+
+Note: using this mod and generating a small world is not recommended.

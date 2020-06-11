@@ -11,7 +11,9 @@ namespace swapDungeon {
 			int dungeonIndex = tasks.FindIndex(genPass => genPass.Name.Equals("Dungeon"));
 
 			//detect whether the config says that randomization will be enabled, if so, randomize if it will swap the dungeon side
-			bool willSwap = GetInstance<swapDungeonConfig>().randomizeSide ? WorldGen.genRand.Next(1) == 0 : true;
+			int swaprand = WorldGen.genRand.Next(2);
+			bool willSwap = GetInstance<swapDungeonConfig>().randomizeSide ? swaprand == 0 : true;
+			System.Console.Write("Config option: " + GetInstance<swapDungeonConfig>().randomizeSide + " willSwap: " + willSwap + " swaprand: " + swaprand + "\n");
 
 			if (dungeonIndex != -1 && willSwap){
 				tasks[dungeonIndex] = new PassLegacy("Dungeon", altDungeonGen);
