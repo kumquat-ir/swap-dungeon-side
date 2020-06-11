@@ -15,8 +15,7 @@ namespace swapDungeon {
 		}
 
 		private void altDungeonGen(GenerationProgress progress){
-			progress.Message = "Creating Dungeon";
-
+			progress.Message = Terraria.Localization.Language.GetText("LegacyWorldGen.58").Value; //localized! (hopefully)
 			int dungeonSide = getDungeonSideBySnow();
 
 			//vanilla dungeon gen code, but swap which side of the world it's on
