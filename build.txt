@@ -1,0 +1,3 @@
+displayName = Change Dungeon Side
+author = TheLastKumquat
+version = 0.1

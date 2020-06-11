@@ -1,0 +1,69 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "TML Launch",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build",
+			"program": "~/Games/terraria/game/tModLoader/tModLoader",
+			"args": ["-skipselect", "-modpack", "${workspaceFolderBasename}"],
+			"cwd": "${workspaceFolder}",
+			"console": "internalConsole",
+			"stopAtEntry": true
+		},
+		{
+			"name": "TML Launch (Internal build)",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "TMLinternalbuild",
+			"program": "~/Games/terraria/game/tModLoader/tModLoader",
+			"args": ["-skipselect", "-modpack", "${workspaceFolderBasename}"],
+			"cwd": "${workspaceFolder}",
+			"console": "internalConsole",
+			"stopAtEntry": true
+		},
+		{
+			"name": "TML Launch (No build)",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "~/Games/terraria/game/tModLoader/tModLoader",
+			"args": ["-skipselect", "-modpack", "${workspaceFolderBasename}"],
+			"cwd": "${workspaceFolder}",
+			"console": "internalConsole",
+			"stopAtEntry": true
+		},
+		{
+			"name": "TML Launch (!Autostart)",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build",
+			"program": "~/Games/terraria/game/tModLoader/tModLoader",
+			"args": ["-modpack", "${workspaceFolderBasename}"],
+			"cwd": "${workspaceFolder}",
+			"console": "internalConsole",
+			"stopAtEntry": true
+		},
+		{
+			"name": "TML Launch (!Autostart, Internal build)",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "TMLinternalbuild",
+			"program": "~/Games/terraria/game/tModLoader/tModLoader",
+			"args": ["-modpack", "${workspaceFolderBasename}"],
+			"cwd": "${workspaceFolder}",
+			"console": "internalConsole",
+			"stopAtEntry": true
+		},
+		{
+			"name": "TML Launch (!Autostart, No build)",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "~/Games/terraria/game/tModLoader/tModLoader",
+			"args": ["-modpack", "${workspaceFolderBasename}"],
+			"cwd": "${workspaceFolder}",
+			"console": "internalConsole",
+			"stopAtEntry": true
+		}
+	]
+}
