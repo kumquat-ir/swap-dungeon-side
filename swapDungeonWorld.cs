@@ -3,12 +3,17 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.World.Generation;
 using Terraria.GameContent.Generation;
+using static Terraria.ModLoader.ModContent;
 
 namespace swapDungeon {
 	public class swapDungeonWorld : ModWorld {
 		public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight){
 			int dungeonIndex = tasks.FindIndex(genPass => genPass.Name.Equals("Dungeon"));
-			if (dungeonIndex != -1){
+
+			//detect whether the config says that randomization will be enabled, if so, randomize if it will swap the dungeon side
+			bool willSwap = GetInstance<swapDungeonConfig>().randomizeSide ? WorldGen.genRand.Next(1) == 0 : true;
+
+			if (dungeonIndex != -1 && willSwap){
 				tasks[dungeonIndex] = new PassLegacy("Dungeon", altDungeonGen);
 				//replace the default dungeon pass with our own
 			}
